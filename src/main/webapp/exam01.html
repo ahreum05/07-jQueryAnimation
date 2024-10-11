@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.7.1.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#sh > input:eq(0)").click(function(){
+			$("#sh > div").show(500);  // 200ms동안 태그를 표시하라
+		});
+		
+		$("#sh > input:eq(1)").click(function(){
+			$("#sh > div").hide(500);  // 200ms동안 태그를 숨겨라
+		});
+		
+		$("#sh > input:eq(2)").click(function(){
+			$("#sh > div").toggle(500); //200ms동안 show와 hide를 교대로 작동
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>show/hide</h1>
+	<div id="sh">
+		<input type="button" value="보이기">
+		<input type="button" value="숨기기">
+		<input type="button" value="토글">
+		<div>
+			<img alt="" src="img/1.jpg" width="300" height="200">
+		</div>
+	
+	</div>
+</body>
+</html>
